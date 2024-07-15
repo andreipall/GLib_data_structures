@@ -9,7 +9,7 @@ void func16() {
     g_hash_table_insert(hash, "Texas", "Austin");
     g_hash_table_insert(hash, "Ohio", "Columbus");
     printf("There are %d keys in the hash\n", g_hash_table_size(hash));
-    printf("The capital of Texas is %s\n", g_hash_table_lookup(hash, "Texas"));
+    printf("The capital of Texas is %s\n", (char *) g_hash_table_lookup(hash, "Texas"));
     gboolean found = g_hash_table_remove(hash, "Virginia");
     printf("The value 'Virginia' was %sfound and removed\n", found ? "" : "not ");
     g_hash_table_destroy(hash);

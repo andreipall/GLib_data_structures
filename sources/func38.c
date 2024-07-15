@@ -15,7 +15,7 @@ void func38() {
     printf("Bill is cutting in line\n");
     GList * fred_ptr = g_queue_peek_tail_link(q);
     g_queue_insert_before(q, fred_ptr, "Bill");
-    printf("Middle person is now %s\n", g_queue_peek_nth(q, 1));
-    printf("%s is still at the end\n", g_queue_peek_tail(q));
+    printf("Middle person is now %s\n", (char *) g_queue_peek_nth(q, 1));
+    printf("%s is still at the end\n", (char *) g_queue_peek_tail(q));
     g_queue_free(q);
 }

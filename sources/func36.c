@@ -3,7 +3,7 @@
 #include "../includes/func36.h"
 
 gboolean iter(GNode * n, gpointer data) {
-    printf("%s ", n->data);
+    printf("%s ", (char *) n->data);
     return FALSE;
 }
 
@@ -20,7 +20,7 @@ void func36() {
     printf("\n>Reversing the child nodes\n");
     g_node_reverse_children(root);
     g_node_traverse(root, G_PRE_ORDER, G_TRAVERSE_ALL, -1, iter, NULL);
-    printf("\n>Root node is %s\n", g_node_get_root(portland)->data);
+    printf("\n>Root node is %s\n", (char *) g_node_get_root(portland)->data);
     printf(">Portland node index is %d\n", g_node_child_index(root, "Portland"));
     g_node_destroy(root);
 }

@@ -41,8 +41,6 @@
 #include "../includes/func40.h"
 #include "../includes/func41.h"
 #include "../includes/func42.h"
-#include "../includes/func43.h"
-#include "../includes/func44.h"
 
 int main(int argc, char ** argv) {
     printf("func1:\n");
@@ -129,10 +127,6 @@ int main(int argc, char ** argv) {
 	func41();
     printf("\nfunc42:\n");
 	func42();
-    //printf("\nfunc43:\n"); //Deprecated
-	//func43();
-    //printf("\nfunc44:\n"); //Deprecated
-	//func44();
     
 	return 0;
 }

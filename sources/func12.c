@@ -6,9 +6,9 @@ void func12() {
     //Basic operations of doubly-linked lists
     GList * list = NULL;
     list = g_list_append(list, "Austin ");
-    printf("The first item is '%s'\n", list->data);
+    printf("The first item is '%s'\n", (char *) list->data);
     list = g_list_insert(list, "Baltimore ", 1);
-    printf("The second item is '%s'\n", g_list_next(list)->data);
+    printf("The second item is '%s'\n", (char *) g_list_next(list)->data);
     list = g_list_remove(list, "Baltimore ");
     printf("After removal of 'Baltimore', the list length is %d\n", g_list_length(list));
     GList * other_list = g_list_append(NULL, "Baltimore ");

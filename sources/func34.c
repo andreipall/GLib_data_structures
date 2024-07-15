@@ -3,12 +3,12 @@
 #include "../includes/func34.h"
 
 static gboolean iter_all(gpointer key, gpointer value, gpointer data) {
-    printf("%s, %s\n", key, value);
+    printf("%s, %s\n", (char *) key, (char *) value);
     return FALSE;
 }
 
 static gboolean iter_some(gpointer key, gpointer value, gpointer data) {
-    printf("%s, %s\n", key, value);
+    printf("%s, %s\n", (char *) key, (char *) value);
     return g_ascii_strcasecmp(key, "b") == 0;
 }
 

@@ -7,7 +7,7 @@ SRCDIR = sources
 BINDIR = bin
 
 # Compiler flags
-CFLAGS = `pkg-config --cflags glib-2.0` -I$(INCDIR)
+CFLAGS = `pkg-config --cflags glib-2.0` -I$(INCDIR) -Wall
 
 # Linker flags
 LDFLAGS = `pkg-config --libs glib-2.0`

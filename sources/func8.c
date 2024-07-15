@@ -3,11 +3,11 @@
 #include "../includes/func8.h"
 
 void print_iterator(gpointer item, gpointer prefix) {
-    printf("%s %s\n", prefix, item);
+    printf("%s %s\n", (char *) prefix, (char *) item);
 }
 
 void print_iterator_short(gpointer item) {
-    printf("%s\n", item);
+    printf("%s\n", (char *) item);
 }
 
 void func8() {

@@ -18,6 +18,6 @@ void func35() {
     g_tree_insert(t, "ccc", "Cleveland");
     g_tree_insert(t, "bb", "Boston");
     gpointer value = g_tree_search(t, (GCompareFunc)finder, NULL);
-    printf("Located value %s; its key is 3 characters long\n", value);
+    printf("Located value %s; its key is 3 characters long\n", (char *) value);
     g_tree_destroy(t);
 }

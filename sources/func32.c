@@ -3,11 +3,11 @@
 #include "../includes/func32.h"
 
 static void key_d(gpointer data) {
-    printf("Key %s destroyed\n", data);
+    printf("Key %s destroyed\n", (char *) data);
 }
 
 static void value_d(gpointer data) {
-    printf("Value %s destroyed\n", data);
+    printf("Value %s destroyed\n", (char *) data);
 }
 
 void func32() {

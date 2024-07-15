@@ -3,13 +3,13 @@
 #include "../includes/func22.h"
 
 void print(gpointer key, gpointer value, gpointer data) {
-    printf("Here are some cities in %s: ", key);
+    printf("Here are some cities in %s: ", (char *) key);
     g_slist_foreach((GSList *)value, (GFunc)printf, NULL);
     printf("\n");
 }
 
 void destroy(gpointer key, gpointer value, gpointer data) {
-    printf("Freeing a GSList, first item is %s\n", ((GSList *)value)->data);
+    printf("Freeing a GSList, first item is %s\n", (char *) ((GSList *)value)->data);
     g_slist_free(value);
 }
 

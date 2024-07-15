@@ -18,6 +18,6 @@ void func29() {
     printf(">Removing the second and third item\n");
     g_ptr_array_remove_range(a, 1, 2);
     g_ptr_array_foreach(a, (GFunc)printf, NULL);
-    printf("The first item is '%s'\n", g_ptr_array_index(a, 0));
+    printf("The first item is '%s'\n", (char *) g_ptr_array_index(a, 0));
     g_ptr_array_free(a, TRUE);
 }

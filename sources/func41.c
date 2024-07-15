@@ -12,11 +12,11 @@ void func41() {
     printf("Starting out, the queue is: ");
     g_queue_foreach(q, (GFunc)printf, NULL);
     GList * fred_link = g_queue_peek_nth_link(q, 2);
-    printf("\nThe link at index 2 contains %s\n", fred_link->data);
+    printf("\nThe link at index 2 contains %s\n", (char *) fred_link->data);
     g_queue_unlink(q, fred_link);
     g_list_free(fred_link);
     GList * jim_link = g_queue_peek_nth_link(q, 2);
-    printf("Now index 2 contains %s\n", jim_link->data);
+    printf("Now index 2 contains %s\n", (char *) jim_link->data);
     g_queue_delete_link(q, jim_link);
     printf("Now the queue is: ");
     g_queue_foreach(q, (GFunc)printf, NULL);
